@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <title>Tracalorie</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand mx-auto fs-3" href="#">Tracalorie</a>
+            <div class="d-flex">
+                <button class="btn btn-outline-light" id="clear-btn" >Clear all</button>
+            </div>
+          </div>
+        </div>
+    </nav>
+
+    <div class="container mt-3">
+        <div class="col-md-6 mx-auto">
+            <div class="card">
+                <div class="card-header bg-light">
+                    <h3>Add Meal & Calorie </h3>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="d-flex justify-content-between p-2">
+                            <div class="form-group">
+                                <label for="meal" class="fs-5">Meal</label>
+                                <input type="text" class="form-control" id="meal">
+                            </div>
+                            <div class="form-group">
+                                <label for="calorie" class="fs-5">Calorie</label>
+                                <input type="number" class="form-control" id="calories">
+                            </div>
+                        </div>
+
+                        <div class="form-group text-right mt-2" id="add-btn">
+                            <button class="btn btn-success lighten-3" id="add-meal"><i class="fa fa-plus"></i> Add meal</button>
+                        </div>
+                        <div class="form-group text-right mt-2" id="edit-btns">
+                            <button class="btn btn-warning lighten-3" id="update-meal"><i class="fa fa-edit"></i> Update meal</button>
+                            <button class="btn btn-danger lighten-3" id="delete-meal"><i class="fa fa-trash-alt"></i> Delete meal</button>
+                            <button class="btn btn-dark lighten-3" id="back-btn" style="float:right;"><i class="fa fa-chevron-left"></i> Back </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-3">
+        <div class="col-md-6 mx-auto">
+            <div class="card text-dark fs-5 bg-warning mb-3">
+                <div class="card-body text-center">
+                    <span>Total Calories : <strong id="total-calories">8000</strong>
+                    </span>
+                </div>
+            </div>
+            
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Meal</th>
+                    <th scope="col">Calories</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody id="item-list">
+                  
+                </tbody>
+              </table>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <script src="app.js"></script>
+    
+</body>
+</html>
